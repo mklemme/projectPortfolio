@@ -41,7 +41,7 @@ ul.projects{
     }
     .projectItem.idea{}
 
-    .projectStatus{
+    .projectStatus:before{
       background: #333;
       border-radius: 4px;
       padding: 7px 10px;
@@ -49,17 +49,20 @@ ul.projects{
       text-transform: uppercase;
       color: white;
       margin-right: 20px;
+
     }
 
-      .projectStatus.incomplete{
+      .projectStatus.incomplete:before{
         background: rgba(17,17,17,.3);
+        content: "incomplete";
       }
-      .projectStatus.complete{
+      .projectStatus.complete:before{
         background: rgba(255,255,255,.2);
+        content: "complete";
       }
       .projectStatus.review{}
-      .projectItem:hover .projectStatus.incomplete,
-      .projectItem:hover .projectStatus.complete{
+      .projectItem:hover .projectStatus.incomplete:before,
+      .projectItem:hover .projectStatus.complete:before{
         background: rgba(255,255,255,.7);
         color: #3f4143;
       }
