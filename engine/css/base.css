@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  font-size: 14px;
+}
+
+
+ul.projects{
+  padding:40px;
+  margin: 0;
+}
+
+  .projectItem{
+    vertical-align: middle;
+    list-style: none;
+    border-left: 10px solid #ccc;
+    border-radius: 0 4px 4px 0;
+    transition: background-color .2s;
+    letter-spacing: 1px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    margin: 0 0 10px 0;
+    padding: 10px 0 10px 20px;
+  }
+    .projectItem:hover{
+      background: rgba(17,17,17,.3);
+    }
+    .projectItem *{
+      display: inline-block;
+    }
+    .projectItem.notes{
+      border-color: white;
+    }
+    .projectItem.project{
+      border-color: #3f4143;
+    }
+    .projectItem.idea{}
+
+    .projectStatus:before{
+      background: #333;
+      border-radius: 4px;
+      padding: 7px 10px;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: white;
+      margin-right: 20px;
+
+    }
+
+      .projectStatus.incomplete:before{
+        background: rgba(17,17,17,.3);
+        content: "incomplete";
+      }
+      .projectStatus.complete:before{
+        background: rgba(255,255,255,.2);
+        content: "complete";
+      }
+      .projectStatus.review{}
+      .projectItem:hover .projectStatus.incomplete:before,
+      .projectItem:hover .projectStatus.complete:before{
+        background: rgba(255,255,255,.7);
+        color: #3f4143;
+      }
+    .projectName{
+      margin-right:15px;
+      color: white;
+    }
+    .projectLinks{
+      text-align: right;
+    }
+      .projectLinks a{
+        color: rgba(255,255,255,.9);
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+
+
+      .projectLinks a:first-child{
+        margin-right: 15px;
+      }
+      .projectLinks a[rel]:before{
+        display: inline-block;
+        font: normal normal normal 24px FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin-right: 7px;
+        font-size: 16px;
+        vertical-align: middle;
+        color: rgba(255,255,255,.7);
+      }
+      .projectLinks a[rel="github"]:before{
+        content: "\f113";
+      }
+      .projectLinks a[rel="live"]:before{
+        content: "\f0c1";
+      }
+      .projectLinks a:hover{
+        background: white;
+        color: #3f4143;
+      }
+      .projectLinks a:hover[rel]:before{
+        color: #3f4143;
+      }
+
+
+    .projectDescription{}
