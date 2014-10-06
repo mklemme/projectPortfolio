@@ -6,7 +6,7 @@ html {
 }
 
 body{
-  font-size: 14px;
+  font-size: 12px;
 }
 
 
@@ -71,7 +71,7 @@ ul.projects{
       color: white;
     }
     .projectLinks{
-      text-align: right;
+
     }
       .projectLinks a{
         color: rgba(255,255,255,.9);
